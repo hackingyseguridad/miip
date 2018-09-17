@@ -6,7 +6,7 @@ cat << "INFO"
  | '_ ` _ \| | | '_ \ / /
  | | | | | | | | |_) / /_
  |_| |_| |_|_|_| .__/____| v.1.0
-               | |  Mi red ( Version Kali Linux )
+               | |  miip ( Version Kali Linux )
                |_|  www.hackingyseguridad.com
 INFO
 echo
