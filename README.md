@@ -7,4 +7,8 @@ Utilidad para extraer de forma auotmatica información de la red y el pc.
 # Instalacion
 sh instalar.sh
 
+# Uso
+miip 
+miip2
+
 www.hackingydeguridad.com
