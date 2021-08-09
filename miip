@@ -1,6 +1,18 @@
 #!/bin/bash
 # Mi IP publica, IP local y red local.
 # (c) hackingyseguridad.com 2017
+
+#Ejecutar script desde Github directamente:
+
+#via curl:
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/hackingyseguridad/scan/master/miip)"
+#via wget:
+#sh -c "$(wget -qO- https://raw.githubusercontent.com/hackingyseguridad/scan/master/miip)"
+# o via fetch:
+#sh -c "$(fetch -o - https://raw.githubusercontent.com/hackingyseguridad/scan/master/miip)"
+
+
+
 Verde='\033[0;32m'
 NC='\033[0m'
 echo
