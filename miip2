@@ -1,4 +1,13 @@
 #!/bin/bash
+
+#Ejecutar script desde Github directamente:
+#via curl:
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/hackingyseguridad/scan/master/miip2)"
+#via wget:
+#sh -c "$(wget -qO- https://raw.githubusercontent.com/hackingyseguridad/scan/master/miip2)"
+# o via fetch:
+#sh -c "$(fetch -o - https://raw.githubusercontent.com/hackingyseguridad/scan/master/miip2)"
+
 cat << "INFO"
             _ _      ___
            (_|_)    |__ \
