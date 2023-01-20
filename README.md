@@ -18,7 +18,9 @@ miip2
 
 # Ejecutar sin instalar con conexion a internet:
 
-wget https://raw.githubusercontent.com/hackingyseguridad/miip/master/vertoodo.sh  -q -O - | bash 
+curl -k https://raw.githubusercontent.com/hackingyseguridad/miip/master/miip2 | sh
+
+wget https://raw.githubusercontent.com/hackingyseguridad/miip/master/vertoodo.sh  -q -O -| bash 
 
 wget https://raw.githubusercontent.com/hackingyseguridad/miip/master/miip2 -q -O - | bash 
 
