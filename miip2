@@ -43,8 +43,6 @@ echo "Gateway: " $(ip route show 0.0.0.0/0)
 echo
 echo "Mascara: " $(ifconfig |grep netmask)
 echo
-echo "IP publica: " $(wget http://ipinfo.io/ip -qO -)
-echo
 echo "DNS: " $(cat /etc/resolv.conf | grep 'nameserver' | awk '{print $2}')
 echo
 echo "Usuarios logueados:\n$(who)"
@@ -54,3 +52,6 @@ echo
 echo "Memoria usada: \n$(free -m | grep -v +)"
 echo
 echo "Discos: \n$(df -h| grep 'Filesystem\|^/dev/*')"
+echo
+echo "IP publica: " $(wget http://ipinfo.io/ip -qO -)
+
