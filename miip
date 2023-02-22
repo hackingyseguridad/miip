@@ -16,9 +16,6 @@
 Verde='\033[0;32m'
 NC='\033[0m'
 echo
-printf "${Verde}IP publica: ${NC}\n"
-wget http://ipinfo.io/ip -qO -
-echo
 printf "${Verde}IP interfaces: ${NC}\n"
 ifconfig
 echo
@@ -51,4 +48,7 @@ echo "\n$(free -m | grep -v +)"
 echo
 printf "${Verde}Unidades: ${NC}\n"
 echo "\n$(df -h| grep 'Filesystem\|^/dev/*')"
+echo
+printf "${Verde}IP publica: ${NC}\n"
+wget http://ipinfo.io/ip -qO -
 echo
