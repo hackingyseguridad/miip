@@ -1,4 +1,4 @@
-# 🌐 miip — Utilidad de diagnóstico de red para Linux
+### miip —
 
 **miip** es una pequeña suite de scripts en Bash que recopila, en un único vistazo, toda la información esencial de red y sistema de una máquina Linux: interfaces, IP local, IP pública, puerta de enlace, tabla ARP, DNS, carga del sistema, memoria y discos.
 
@@ -8,7 +8,7 @@ Está pensada para administradores de sistemas, técnicos de soporte y pentester
 
 ---
 
-## 📑 Tabla de contenidos
+### Tabla de contenidos
 
 1. [Características](#-características)
 2. [Scripts incluidos](#-scripts-incluidos)
@@ -22,20 +22,20 @@ Está pensada para administradores de sistemas, técnicos de soporte y pentester
 
 ---
 
-## ✨ Características
+### Características
 
-- 🔍 Detección automática de interfaces de red, IP local e IP pública.
-- 🧭 Muestra la puerta de enlace (gateway) y la tabla de rutas.
-- 📡 Vuelca la tabla ARP (direcciones MAC visibles en la red local).
-- 🧾 Lista los servidores DNS configurados.
-- 🖥️ Información del sistema: distribución, kernel, arquitectura, hostname.
-- 📊 Estado de recursos: carga media, tiempo de actividad (*uptime*), memoria y espacio en disco.
-- ⚡ Ejecutable sin instalación previa, directamente vía `curl` o `wget`.
-- 🪶 Cero dependencias externas más allá de utilidades estándar de Linux.
+- Detección automática de interfaces de red, IP local e IP pública.
+- Muestra la puerta de enlace (gateway) y la tabla de rutas.
+- Vuelca la tabla ARP (direcciones MAC visibles en la red local).
+- Lista los servidores DNS configurados.
+- Información del sistema: distribución, kernel, arquitectura, hostname.
+- Estado de recursos: carga media, tiempo de actividad (*uptime*), memoria y espacio en disco.
+- Ejecutable sin instalación previa, directamente vía `curl` o `wget`.
+- Cero dependencias externas más allá de utilidades estándar de Linux.
 
 ---
 
-## 🧩 Scripts incluidos
+### Scripts incluidos
 
 | Script | Propósito | Compatibilidad | Salida en color |
 |---|---|---|---|
@@ -44,7 +44,7 @@ Está pensada para administradores de sistemas, técnicos de soporte y pentester
 | `instalar.sh` | Instalador que copia `miip` y `miip2` a `/sbin/` para poder invocarlos como comandos globales | Cualquiera | — |
 | `vertoodo.sh` | Script de enumeración post-explotación (recolección extendida de información del sistema: usuarios, procesos, servicios, claves SSH, historial, etc.) | Linux con herramientas de auditoría (`lscpu`, `dmidecode`, `netstat`...) | ✅ |
 
-> ⚠️ `vertoodo.sh` está pensado como herramienta de *enumeración* en auditorías de seguridad **autorizadas** (post-explotación / hardening review), ya que también inspecciona credenciales, historial de comandos y ficheros con permisos SUID/SGID. Revisa el [aviso legal](#-aviso-legal-y-buenas-prácticas) antes de usarlo.
+> `vertoodo.sh` está pensado como herramienta de *enumeración* en auditorías de seguridad **autorizadas** (post-explotación / hardening review), ya que también inspecciona credenciales, historial de comandos y ficheros con permisos SUID/SGID. Revisa el [aviso legal](#-aviso-legal-y-buenas-prácticas) antes de usarlo.
 
 ### ¿Qué datos recopila cada uno?
 
@@ -70,7 +70,7 @@ Está pensada para administradores de sistemas, técnicos de soporte y pentester
 
 ---
 
-## ⚙️ Requisitos
+### Requisitos
 
 - Sistema Linux (probado en distribuciones basadas en Debian/Kali).
 - Bash instalado.
@@ -80,7 +80,7 @@ Está pensada para administradores de sistemas, técnicos de soporte y pentester
 
 ---
 
-## 📥 Instalación
+### Instalación
 
 ### Opción 1 — Clonar e instalar
 
@@ -107,11 +107,11 @@ wget https://raw.githubusercontent.com/hackingyseguridad/miip/master/miip2 -q -O
 wget https://raw.githubusercontent.com/hackingyseguridad/miip/master/vertoodo.sh -q -O - | bash
 ```
 
-> 💡 Antes de ejecutar cualquier script directamente desde Internet en un sistema de producción, es buena práctica descargarlo primero y revisarlo (`cat`/`less`) para saber exactamente qué va a hacer.
+> Antes de ejecutar cualquier script directamente desde Internet en un sistema de producción, es buena práctica descargarlo primero y revisarlo (`cat`/`less`) para saber exactamente qué va a hacer.
 
 ---
 
-## ▶️ Uso
+### Uso
 
 Una vez instalado con `instalar.sh`, basta con invocar el comando desde cualquier ruta:
 
@@ -122,7 +122,7 @@ miip2    # Versión Kali Linux (Kernel 4.x)
 
 ---
 
-## 🧪 Ejemplo de salida
+### Ejemplo de salida
 
 ```text
 IP interfaces:
@@ -151,7 +151,7 @@ IP publica:
 
 ---
 
-## 🆚 Comparativa miip vs miip2
+###  Comparativa miip vs miip2
 
 ```
 ┌─────────────────────────────┬───────────────┬────────────────┐
@@ -170,7 +170,7 @@ En resumen: usa **`miip`** para un chequeo rápido y ligero en cualquier sistema
 
 ---
 
-## 🔐 Aviso legal y buenas prácticas
+### Aviso legal 
 
 - Estos scripts consultan un servicio externo (`ipinfo.io`) para resolver la IP pública; ten en cuenta la privacidad si los ejecutas en entornos sensibles.
 - `vertoodo.sh` recopila información extendida del sistema (usuarios, procesos, servicios, historial de comandos, claves SSH y ficheros con permisos especiales) y debe usarse **únicamente en sistemas propios o con autorización explícita** del propietario, como parte de una auditoría de seguridad legítima.
